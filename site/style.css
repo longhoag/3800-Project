@@ -59,3 +59,10 @@ body {
     display: block;
     margin-bottom: 5px;
 }
+
+.screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 16px;
+}
