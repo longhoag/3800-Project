@@ -22,4 +22,4 @@ io.on("connection", function(socket){
     });    
 });
 
-server.listen(1000);
+server.listen(2000);

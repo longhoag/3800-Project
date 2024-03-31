@@ -60,14 +60,24 @@ body {
     margin-bottom: 5px;
 }
 
+/* form in the join creen */
 .screen .form-input input {
     width: 100%;
     padding: 10px;
     border: 1px solid #555;
     font-size: 16px;
+}
+
+/* join button */
+.screen .form-input button {
+    padding: 10px 20px;
+    background: #111;
+    color: #eee;
+    font-size: 16px;
     cursor: pointer;
     outline: none;
     border: none;
+
 }
 
 .chat-screen .header {
@@ -115,11 +125,11 @@ body {
     padding: 10px;
 }
 
-.chat-screen .messages .message .my-message {
+.chat-screen .messages .message.my-message {
     justify-content: flex-end;
 }
 
-.chat-screen .messages .message .other-message {
+.chat-screen .messages .message.other-message {
     justify-content: flex-start;
 }
 
