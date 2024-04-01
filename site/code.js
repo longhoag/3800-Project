@@ -1,5 +1,3 @@
-const { render } = require("express/lib/response");
-
 (function() {
     const app = document.querySelector(".app");
     const socket = io();
@@ -38,6 +36,7 @@ const { render } = require("express/lib/response");
 
         app.querySelector(".chat-screen #message-input").value = "";
 
+
     });
 
     app.querySelector(".chat-screen #exit-chat").addEventListener("click", function() {
@@ -52,7 +51,7 @@ const { render } = require("express/lib/response");
     socket.on("chat", function(message){
         renderMessage("other", message);
     });
-    
+
 
     function renderMessage(type, message) {
         let messageContainer = app.querySelector(".chat-screen .messages");
@@ -65,7 +64,6 @@ const { render } = require("express/lib/response");
                     <div class="name"> You </div>
                     <div class="text"> ${message.text} </div> 
                 </div>
-
             `;
             messageContainer.appendChild(element);
         }
@@ -77,7 +75,6 @@ const { render } = require("express/lib/response");
                     <div class="name"> ${message.username} </div>
                     <div class="text"> ${message.text} </div> 
                 </div>
-
             `;
             messageContainer.appendChild(element);
         }
