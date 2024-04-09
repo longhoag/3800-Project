@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,19 +46,36 @@ body {
     margin: 20px 0px;
 }
 
+/* Join header text */
 .screen h2 {
     margin-bottom: 20px;
-    font-size: 30px;
-    color: #111;
-    border-bottom: 4px solid #555;
+    font-size: 60px;
+    color: #862424;
+    /* border-bottom: 4px solid #555; */
     padding: 5px 0px;
     display: inline-block;
+}
+
+.gradient {
+
+    /* background-color: rgb(16, 111, 212); */
+  
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #b62e96, #4165dd);
+
+    background-size: 100%;
+    background-repeat: repeat;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 /* username, button text label */
 .screen .form-input label {
     display: block;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -76,18 +93,67 @@ body {
     padding-bottom: 50px;
 }
 
+.app .button {
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* join button */
 .screen .form-input button {
-    padding: 10px 20px;
-    background: #111;
-    color: #eee;
+    align-items: center;
+    background-color: #639eea;
+    border: 2px solid #111;
     border-radius: 15px;
-    font-size: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
     cursor: pointer;
-    outline: none;
-    border: none;
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+  
+    font-size: 20px;
+    height: 50px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     font-weight: bold;
+}
+
+.screen .form-input button:after {
+  background-color: #111;
+  border-radius: 15px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.screen .form-input button:hover:after {
+  transform: translate(0, 0);
+}
+
+.screen .form-input button:active {
+  background-color: #1a68ce;
+  outline: 0;
+}
+
+.screen .form-input button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .screen .form-input button {
+    padding: 0 40px;
+  }
 }
 
 
