@@ -57,7 +57,6 @@ body {
 }
 
 .gradient {
-
     /* background-color: rgb(16, 111, 212); */
   
     /* Create the gradient. */
@@ -156,60 +155,91 @@ body {
   }
 }
 
-
+/* header banner */
 .chat-screen .header {
-    background: #111;
+    /* background: #111; */
+    background-image: linear-gradient(45deg, #4165dd, #b62e96);
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-
-
 }
 
 .chat-screen .header .logo {
     font-size: 25px;
     color: #eee;
     font-weight: 600;
+    font-style: italic;
 }
 
+/* exit button */
 .chat-screen .header button {
-    padding: 5px 10px;
-    border: 1px solid #eee;
+    appearance: none;
+    background-color: transparent;
+    border: 3px solid #ffffff;
     border-radius: 15px;
-    background: transparent;
-    color: #eee;
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    color: #ffffff;
     cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    line-height: normal;
+    margin: 0;
+    min-width: 0;
     outline: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
 }
 
+
+.chat-screen .header button:disabled {
+  pointer-events: none;
+}
+
+.chat-screen .header button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.chat-screen .header button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 .chat-screen .messages {
     width: 100%;
     height: calc(100% - 130px);
-    background: #b4e6ef;
+    background: #ffffff;
     overflow: auto;
+
 }
 
 .chat-screen .messages .message {
     display: flex;
     padding: 10px;
-   
 }
 
 .chat-screen .messages .message > div {
     max-width: 80%;
     background: #fff;
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
     padding: 10px;
     border-radius: 15px;
 }
 
 .chat-screen .messages .message.my-message {
     justify-content: flex-end;
+    
 }
 
 .chat-screen .messages .message.other-message {
@@ -230,7 +260,7 @@ body {
 .chat-screen .messages .update {
     text-align: center;
     padding: 10px;
-    font-size: italic;
+    font-style: italic;
 }
 
 .chat-screen .typebox {
@@ -246,21 +276,34 @@ body {
     font-size: 18px;
     border-radius: 15px;
     padding-inline-start: 10px;
-    font-family: 'Courier New', Courier, monospace;
-   
-    
 }
 
 .chat-screen .typebox button {
     width: 80px;
     height: 100%;
-    background: #156283;
+    /* color: linear-gradient(45deg, #4165dd, #b62e96); */
+    /* background-image: linear-gradient(45deg, #4165dd, #b62e96); */
+    /* background-color: #fff; */
+    /* border: 2px solid #000000; */
     font-weight: bold;
     border-radius: 15px;
-    color: #eee;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+.chat-screen .typebox button:disabled {
+    pointer-events: none;
+}
+  
+.chat-screen .typebox button:hover {
+    color: #fafafa;
+    background-image: linear-gradient(45deg, #4165dd, #b62e96);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+  
+.chat-screen .typebox button:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
