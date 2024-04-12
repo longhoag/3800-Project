@@ -5,6 +5,7 @@ const path = require("path");
 const app = express();
 const server = require("http").createServer(app);
 
+// declare communication
 const io = require("socket.io")(server);
 
 // website source code in folder /site
@@ -19,7 +20,7 @@ io.on("connection", function(socket){
 
     // send signal users exit
     socket.on("exitUser", function(username) {
-        socket.broadcast.emit("update", username + " has quit the group chat");
+        socket.broadcast.emit("update", username + " has left the group chat");
     });
 
     // send signal chatting

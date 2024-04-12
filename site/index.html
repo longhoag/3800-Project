@@ -8,8 +8,8 @@
 <body>
 
     <div class="app">
-        <!-- join screen ui -->
-        <div class="screen join-screen active">
+        <!-- sign up screen ui: username enter and join button-->
+        <div class="screen signup-screen active">
             <div class="form">
                 <h2 class="gradient">Sign up to chat</h2>
                 <div class="form-input">
@@ -22,18 +22,18 @@
             </div>
         </div>
 
-        <!-- chat screen ui -->
+        <!-- chat screen ui: basic chat interface with leave chat button-->
         <div class="screen chat-screen">
             <div class="header">
                 <div class="title">Chatroom</div>
-                <button id="exit-chat">Exit</button>
+                <button id="leave-chat">Leave Chat</button>
             </div>
             <div class="messages">
                 <!-- Dummy message -->
                 <!-- <div class="message my-message">
                     <div>
                         <div class="name">You</div>
-                        <div class="text">Hi</div>
+                        <div class="text">How are you?</div>
                     </div>
                 </div>
                 
@@ -44,11 +44,11 @@
                 <div class="message other-message">
                     <div>
                         <div class="name">You</div>
-                        <div class="text">Hi</div>
+                        <div class="text">Good!</div>
                     </div>
                 </div> -->
 
-                <!-- dummy -->
+                <!-- dummy testing-->
             </div>
 
             <div class="typebox">
@@ -59,7 +59,12 @@
     </div>
 
     <!-- link js file -->
+    <!-- import the Socket.IO library for WebSocket communication. -->
     <script type="text/javascript" src="socket.io/socket.io.js"></script>
+
+    <!-- client-side JavaScript code responsible for handling user interactions, sending messages to the server,
+    and updating the chat interface based on server responses. -->
     <script type="text/javascript" src="code.js"></script>
+
 </body>
 </html>

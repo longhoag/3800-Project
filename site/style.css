@@ -51,7 +51,7 @@ input {
     margin: 20px 0px;
 }
 
-/* Join header text */
+/* sign up page header text */
 .screen h2 {
     margin-bottom: 20px;
     font-size: 60px;
@@ -84,7 +84,7 @@ input {
     font-weight: bold;
 }
 
-/* form in the join creen */
+/* form in the sign up creen */
 .screen .form-input input {
     width: 100%;
     padding: 15px;
@@ -180,7 +180,7 @@ input {
     font-style: italic;
 }
 
-/* exit button */
+/* leave button */
 .chat-screen .header button {
     appearance: none;
     background-color: transparent;

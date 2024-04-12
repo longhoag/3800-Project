@@ -5,8 +5,8 @@
     let name;
 
     // click to register new user
-    app.querySelector(".join-screen #join-user").addEventListener("click", function(){
-        let username = app.querySelector(".join-screen #username").value;
+    app.querySelector(".signup-screen #join-user").addEventListener("click", function(){
+        let username = app.querySelector(".signup-screen #username").value;
 
         // if non-input, do nothing
         if (username.length == 0) {
@@ -17,19 +17,19 @@
         name = username;
 
         //showing chat screen after login
-        app.querySelector(".join-screen").classList.remove("active");
+        app.querySelector(".signup-screen").classList.remove("active");
         app.querySelector(".chat-screen").classList.add("active");
     });
 
     // click enter to click the button for intuitiveness: on login
-    app.querySelector(".join-screen #username").addEventListener("keydown", function(event) {
+    app.querySelector(".signup-screen #username").addEventListener("keydown", function(event) {
         if (event.keyCode == 13) {
            event.preventDefault();
-           app.querySelector(".join-screen #join-user").click();
+           app.querySelector(".signup-screen #join-user").click();
         }
     });
 
-    // click to pass messages
+    // click to send messages to the server and the server will render the messages to all users
     app.querySelector(".chat-screen #send-message").addEventListener("click", function() {
         let message = app.querySelector(".chat-screen #message-input").value;
         if (message.length == 0) {
@@ -54,8 +54,8 @@
         }
     });
 
-    // exit chat click button
-    app.querySelector(".chat-screen #exit-chat").addEventListener("click", function() {
+    // leave chat click button
+    app.querySelector(".chat-screen #leave-chat").addEventListener("click", function() {
         socket.emit("exitUser", name);
         window.location.href = window.location.href;
     });
@@ -68,7 +68,7 @@
         loadMessage("other", message);
     });
 
-    // load message by appending html code to show on the screen
+    // load message by appending dynamically html code to show on the screen
     function loadMessage(type, message) {
         let messageContainer = app.querySelector(".chat-screen .messages");
 
