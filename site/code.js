@@ -78,7 +78,6 @@
             element.setAttribute("class", "message my-message");
             element.innerHTML = `
                 <div>
-                    <div class="name"> You </div>
                     <div class="text"> ${message.text} </div> 
                 </div>
             `;
