@@ -24,9 +24,18 @@ The user’s manual text file will be available through Canvas submission. In ad
 #### Step 1: 
 Install Node.js on your system.
 
-Step 2: In your system terminal, locate in the project folder and run the following command to initiate the server. Make sure your path is in the project's main folder which has the server.js file.
-node server.js  
-Step 3: Open your preferred web browser window and go to localhost:8000 in your address bar.
-Step 4: Enter your username and click the Join button to join and start messaging.
-Step 5: Open another web browser window and go to localhost:8000 in your address bar again. Enter your username and click the Join button to join. When you start messaging on either of your web browser windows, the messages you sent will appear in other users’ chat interfaces.
-Step 6: If you wish to leave the group chat, you can click the “Leave Chat” button. Once you leave, it will notify other existing users in the group chat of your leaving. 
+#### Step 2: 
+In your system terminal, locate in the project folder and run the following command to initiate the server. Make sure your path is in the project's main folder which has the server.js file.
+`node server.js`  
+
+#### Step 3: 
+Open your preferred web browser window and go to `localhost:8000` in your address bar.
+
+#### Step 4: 
+Enter your username and click the Join button to join and start messaging.
+
+#### Step 5: 
+Open another web browser window and go to `localhost:8000` in your address bar again. Enter your username and click the Join button to join. When you start messaging on either of your web browser windows, the messages you sent will appear in other users’ chat interfaces.
+
+#### Step 6: 
+If you wish to leave the group chat, you can click the “Leave Chat” button. Once you leave, it will notify other existing users in the group chat of your leaving. 
