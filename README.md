@@ -5,7 +5,7 @@ This project is the client and server chat application website. The website disp
 ## Project description
 ### Overview
 
-This project aims to create a chatting room environment, whose server will record any messages from a client and display them to other users in the group chat. The goal of the project is to log users into the group chat, and allow them to send and receive messages from other users in real-time.
+- This project aims to create a chatting room environment, whose server will record any messages from a client and display them to other users in the group chat. The goal of the project is to log users into the group chat, and allow them to send and receive messages from other users in real-time.
 
 ### User Interface
 The project website features a simple chat room interface with two main pages: sign up page and group chat page. 
