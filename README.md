@@ -39,3 +39,12 @@ Open another web browser window and go to `localhost:8000` in your address bar a
 
 #### Step 6: 
 If you wish to leave the group chat, you can click the “Leave Chat” button. Once you leave, it will notify other existing users in the group chat of your leaving. 
+
+## Results and Discussion
+Our chat application is able to queue at least 10 clients, and it broadcasts any messages from a client to the other participants. Moreover, whenever a client joins or leaves the server, the server will send a status message about it to the group chat to notify other clients in the group. For example, it will show up on screen “client has joined the group chat “ or “client has left the group chat.” 
+
+
+In addition, our chat application supports multiple languages. We have tested different languages such as Spanish, French, Chinese, Japanese, Russian, and of course English. The messages and the usernames, which the clients use, display normally with these languages without any error. 
+
+
+Last but not least, since our server runs on the local host, the server can then broadcast messages to all other connected clients almost instantly when a client sends a message to the server. Furthermore, localhost allows clients to use the chat server and client application offline without an internet connection. We have tested that and the functions worked well as a result. We also observed a slight increase in memory usage of running the server as the connections to the server increased. 
